@@ -21,31 +21,29 @@ export const menuConfig: MenuItem[] = [
           { label: "CLI", file: "cli.md" },
         ],
       },
-      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
-      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
-      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
-      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
-      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
-      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
+    ],
+  },
+  {
+    label: "Distribusi Linux",
+    children: [
+      { label: "Apa Itu Distribusi Linux", file: "distro.md" },
+      { label: "Distribusi Linux Populer", file: "pop-distro.md" },
+      { label: "DE & WM", file: "dewm.md" },
     ],
   },
   {
     label: "Instalasi",
     children: [
-      { label: "Persiapan Instalasi", file: "persiapan-instalasi.md" },
-      { label: "Langkah Instalasi", file: "langkah-instalasi.md" },
-      { label: "Konfigurasi Awal", file: "konfigurasi-awal.md" },
+      // { label: "Persiapan Instalasi", file: "persiapan-instalasi.md" },
+      // { label: "Langkah Instalasi", file: "langkah-instalasi.md" },
+      // { label: "Konfigurasi Awal", file: "konfigurasi-awal.md" },
     ],
   },
   {
-    label: "Bahan & Alat",
+    label: "Tools",
     children: [
-      { label: "VirtualBox", file: "virtualbox.md" },
-      { children: [
-          { label: "QEMU", file: "qemu.md" },
-          { label: "VMware", file: "vmware.md" },
-        ],
-      },
-    ],
-  },
+      { label: "Virtualiasi", file: "virtualisasi.md" },
+      { label: "ISO file", file: "iso.md" },
+    ]
+  }
 ];

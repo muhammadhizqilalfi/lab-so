@@ -125,7 +125,7 @@ export default function Page() {
                 ),
                 h4: ({ node, ...props }) => (
                   <h4
-                    className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-4"
+                    className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-4 mt-8"
                     {...props}
                   />
                 ),
@@ -152,6 +152,9 @@ export default function Page() {
                 ),
                 li: ({ node, ...props }) => (
                   <li className="text-sm sm:text-base md:text-lg" {...props} />
+                ),
+                br: ({ ...props }) => (
+                  <br {...props} className="block my-4" /> // `my-4` buat jarak atas bawah
                 ),
                 code({ node, inline, className, children, ...props }: any) {
                   const text = String(children).replace(/\n$/, "");

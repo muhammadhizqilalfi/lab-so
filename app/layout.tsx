@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lab Sistem Operasi B",
-  description: "Web Praktikum Sistem Operasi B",
+  title: "Lab Sistem Operasi A",
+  description: "Web Praktikum Sistem Operasi A",
   icons: {
     icon: "assets/linux.png",
   },

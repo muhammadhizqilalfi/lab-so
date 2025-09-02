@@ -43,7 +43,7 @@ export default function Navbar({ onSelect }: NavbarProps) {
           />
           {screenSize !== "mobile" && (
             <span className="text-sm md:text-base font-medium">
-              Lab Sistem Operasi B
+              Lab Sistem Operasi A
             </span>
           )}
         </div>
