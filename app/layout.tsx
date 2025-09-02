@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Lab Sistem Operasi B",
   description: "Web Praktikum Sistem Operasi B",
   icons: {
-    icon: "/linux.png",
+    icon: "assets/linux.png",
   },
 };
 
