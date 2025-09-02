@@ -200,7 +200,7 @@ export default function Page() {
               {content}
             </ReactMarkdown>
 
-            <div className="mt-8 flex flex-col sm:flex-row justify-between gap-4">
+            <div className="mt-20 flex flex-col sm:flex-row justify-between gap-4">
               {getPrevLabel() && (
                 <a
                   href="#"

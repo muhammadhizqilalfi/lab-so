@@ -7,7 +7,7 @@ export interface MenuItem {
 
 export const menuConfig: MenuItem[] = [
   {
-    label: "Sistem Operasi",
+    label: "Pengenalan",
     children: [
       { label: "Apa Itu Sistem Operasi", file: "apa-itu-sistem-operasi.md" },
       { label: "Sejarah Sistem Operasi", file: "sejarah-sistem.md" },
@@ -21,6 +21,12 @@ export const menuConfig: MenuItem[] = [
           { label: "CLI", file: "cli.md" },
         ],
       },
+      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
+      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
+      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
+      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
+      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
+      {label: "Fungsi Sistem Operasi", file: "fungsi-sistem-operasi.md" },
     ],
   },
   {

@@ -3,12 +3,12 @@
 
 ![open](https://mediaedukasi.id/wp-content/uploads/2023/11/open-source-101-everything.jpg)
 
-Definisi
+#### Definisi
 ___
 
 Perangkat lunak yang kode sumbernya (source code) terbuka dan dapat diakses, dipelajari, dimodifikasi, serta disebarkan ulang oleh siapa saja.
 
-Ciri-ciri:
+#### Ciri-ciri:
 ___
 
 - Gratis digunakan (meskipun ada yang berbayar untuk dukungan).
