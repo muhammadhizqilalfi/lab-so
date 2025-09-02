@@ -135,6 +135,15 @@ export default function Page() {
                     {...props}
                   />
                 ),
+                a: ({ node, ...props }) => (
+                  <a
+                    className="text-blue-400 hover:underline break-all"
+                    {...props}
+                  />
+                ),
+                strong: ({ node, ...props }) => (
+                  <strong className="font-semibold" {...props} />
+                ),
                 hr: ({ node, ...props }) => (
                   <hr className="my-6 border-gray-700" {...props} />
                 ),
