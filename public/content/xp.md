@@ -6,9 +6,9 @@ ___
 
 Sebelum melakukan instalasi maka pastikan terlebih dahulu kalian telah mempunyai:
 
-1. Software Virtualisasi - VirtualBox/VMware (Sudah Terinstall)
+ 1. Software Virtualisasi - VirtualBox/VMware (Sudah Terinstall)
 
-2. ISO file Windows XP
+ 2. ISO file Windows XP
 
 Kedua bahan dan alat tersebut bisa ditemukan di tab Tools
 
@@ -17,7 +17,7 @@ Jika semua sudah siap, kita bisa lanjutkan ke proses intalasi.
 #### Intalasi
 ___
 
-![1](/public/assets/XP%20(1).png)
+![1](/public/assets/XP1.png)
 
 ![2](/public/assets/XP%20(2).png)
 
