@@ -149,7 +149,7 @@ export default function Page() {
                 ),
                 img: ({ node, ...props }) => (
                   <img
-                    className="inline-block max-h-30 sm:max-h-40 md:max-h-50 lg:max-h-60 mx-2 rounded"
+                    className="inline-block max-h-30 sm:max-h-40 md:max-h-50 lg:max-h-120 mx-2 mb-6 rounded"
                     {...props}
                   />
                 ),
