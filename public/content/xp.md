@@ -17,7 +17,7 @@ Jika semua sudah siap, kita bisa lanjutkan ke proses intalasi.
 #### Intalasi
 ___
 
-![1](/public/assets/XP1.png)
+![1](/public/assets/XP2.png)
 
 ![2](/public/assets/XP%20(2).png)
 
