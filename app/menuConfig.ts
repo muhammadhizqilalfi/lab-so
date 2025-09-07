@@ -34,7 +34,7 @@ export const menuConfig: MenuItem[] = [
   {
     label: "Instalasi",
     children: [
-      // { label: "Persiapan Instalasi", file: "persiapan-instalasi.md" },
+      { label: "Instalasi Windows XP", file: "xp.md" },
       // { label: "Langkah Instalasi", file: "langkah-instalasi.md" },
       // { label: "Konfigurasi Awal", file: "konfigurasi-awal.md" },
     ],
