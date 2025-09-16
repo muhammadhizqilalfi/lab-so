@@ -36,7 +36,12 @@ export const menuConfig: MenuItem[] = [
     children: [
       { label: "Instalasi Windows XP", file: "xp.md" },
       { label: "Instalasi Linux Ubuntu", file: "linux.md" },
-      // { label: "Konfigurasi Awal", file: "konfigurasi-awal.md" },
+    ],
+  },
+  {
+    label: "Materi",
+    children: [
+      { label: "Basic Command Linux", file: "basic.md" },
     ],
   },
   {
