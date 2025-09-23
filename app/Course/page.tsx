@@ -160,7 +160,7 @@ export default function Page() {
                   <ol className="list-decimal ml-6 mb-4 space-y-1" {...props} />
                 ),
                 li: ({ node, ...props }) => (
-                  <li className="text-sm sm:text-base md:text-lg" {...props} />
+                  <li className="text-sm sm:text-base md:text-lg mb-5" {...props} />
                 ),
                 br: ({ ...props }) => (
                   <br {...props} className="block my-4" /> // `my-4` buat jarak atas bawah

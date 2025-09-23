@@ -29,6 +29,10 @@ export const menuConfig: MenuItem[] = [
       { label: "Apa Itu Distribusi Linux", file: "distro.md" },
       { label: "Distribusi Linux Populer", file: "pop-distro.md" },
       { label: "DE & WM", file: "dewm.md" },
+      { label: "Struktur Folder di Linux", file: "folder.md" },
+      // { label: "Manajemen Paket", file: "manajemen-paket.md" },
+      // { label: "Repository", file: "repo.md" },
+      // { label: "Kernel Linux", file: "kernel.md" },
     ],
   },
   {
@@ -42,6 +46,7 @@ export const menuConfig: MenuItem[] = [
     label: "Materi",
     children: [
       { label: "Basic Command Linux", file: "basic.md" },
+      { label: "Lanjutan Folder & File", file: "adv1.md" },
     ],
   },
   {
