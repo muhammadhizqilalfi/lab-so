@@ -1,8 +1,8 @@
 // menuConfig.ts
 export interface MenuItem {
   label?: string;
-  file?: string;          // isi markdown kalau dia langsung punya konten
-  children?: MenuItem[];  // untuk subcourse atau subbab
+  file?: string; // isi markdown kalau dia langsung punya konten
+  children?: MenuItem[]; // untuk subcourse atau subbab
 }
 
 export const menuConfig: MenuItem[] = [
@@ -12,11 +12,15 @@ export const menuConfig: MenuItem[] = [
       { label: "Apa Itu Sistem Operasi", file: "apa-itu-sistem-operasi.md" },
       { label: "Sejarah Sistem Operasi", file: "sejarah-sistem.md" },
       { label: "Jenis-Jenis Sistem Operasi", file: "jenis-sistem.md" },
-      { children: [
+      {
+        children: [
           { label: "Open Source", file: "open-source.md" },
-          { label: "Closed Source", file: "closed-source.md" },]},
+          { label: "Closed Source", file: "closed-source.md" },
+        ],
+      },
       { label: "Antarmuka", file: "gui-cli.md" },
-      { children: [
+      {
+        children: [
           { label: "GUI", file: "gui.md" },
           { label: "CLI", file: "cli.md" },
         ],
@@ -47,6 +51,15 @@ export const menuConfig: MenuItem[] = [
     children: [
       { label: "Basic Command Linux", file: "basic.md" },
       { label: "Lanjutan Folder & File", file: "adv1.md" },
+      { label: "Lanjutan User & Permission", file: "adv2.md" },
+      {
+        children: [
+          { label: "Command User & Permission", file: "subadv2.md" },
+        ],
+      },
+      //{ label: "Lanjutan Process & Service", file: "adv3.md" },
+      //{ label: "Lanjutan Network", file: "adv4.md" },
+      //{ label: "Lanjutan Disk & Filesystem", file: "adv5.md" },
     ],
   },
   {
@@ -54,6 +67,6 @@ export const menuConfig: MenuItem[] = [
     children: [
       { label: "Virtualiasi", file: "virtualisasi.md" },
       { label: "ISO file", file: "iso.md" },
-    ]
-  }
+    ],
+  },
 ];
