@@ -49,16 +49,16 @@ export const menuConfig: MenuItem[] = [
   {
     label: "Materi",
     children: [
-      { label: "Basic Command Linux", file: "basic.md" },
-      { label: "Lanjutan Folder & File", file: "adv1.md" },
-      { label: "Lanjutan User & Permission", file: "adv2.md" },
+      { label: "1. Basic Command Linux", file: "basic.md" },
+      { label: "2. Lanjutan Folder & File", file: "adv1.md" },
+      { label: "3. Lanjutan User & Permission", file: "adv2.md" },
       {
         children: [
-          { label: "Command User & Permission", file: "subadv2.md" },
+          { label: "3.a. Command User & Permission", file: "subadv2.md" },
         ],
       },
-      //{ label: "Lanjutan Process & Service", file: "adv3.md" },
-      //{ label: "Lanjutan Network", file: "adv4.md" },
+      { label: "4. Lanjutan Process & Service", file: "adv3.md" },
+      { label: "5. Lanjutan Network", file: "adv4.md" },
       //{ label: "Lanjutan Disk & Filesystem", file: "adv5.md" },
     ],
   },

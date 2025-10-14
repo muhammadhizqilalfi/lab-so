@@ -62,6 +62,7 @@ Command :
         ```
         username:x:UID:GID:home_directory:default_shell
         ```
+    ---
 
 2. Manajemen Group
 
@@ -109,6 +110,7 @@ Command :
         ```
         id username
         ```
+    ---
 
 3. Switch User (Berpindah User)
 
@@ -131,6 +133,8 @@ Command :
     ```
     exit
     ```
+    
+    ---
 
 4. Permission (Hak Akses File & Folder)
 
@@ -151,6 +155,8 @@ Command :
     - **Owner** - Pemilih file
     - **Group** - Grup file
     - **Others** - Semua pengguna lainnya
+
+    ---
 
 5. Mengubah Permission File
 
@@ -184,6 +190,8 @@ Command :
         chmod 755 file.sh # Owner: rwx (7), Group: r-x (5), Others: r-x (5)
         ```
 
+    ---
+
 6. Mengubah Kepemilikan File
 
     - Mengubah Owner
@@ -209,3 +217,5 @@ Command :
         ```
         sudo chown alfi:admuser data.txt
         ```
+
+    ---

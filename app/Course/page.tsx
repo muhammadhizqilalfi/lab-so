@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import { menuConfig, MenuItem } from "../menuConfig";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vs2015 } from "react-syntax-highlighter/dist/cjs/styles/hljs"; // terminal-like dark
+import { github } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export default function Page() {
   const [active, setActive] = useState("Apa Itu Sistem Operasi");
