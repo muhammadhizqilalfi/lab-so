@@ -26,6 +26,7 @@ export default function Home() {
           Sistem Operasi menjadi fondasi utama yang menggerakkan komputer dan
           aplikasi — Mari jelajahi dunia sistem operasi!
         </p>
+        
 
         {/* Tombol */}
         <a href="/Course">

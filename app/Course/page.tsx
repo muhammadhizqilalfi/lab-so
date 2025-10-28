@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import { menuConfig, MenuItem } from "../menuConfig";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vs2015 } from "react-syntax-highlighter/dist/cjs/styles/hljs"; // terminal-like dark
-import { github } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { vs2015 } from "react-syntax-highlighter/dist/cjs/styles/hljs"; // dark terminal style
 
 export default function Page() {
   const [active, setActive] = useState("Apa Itu Sistem Operasi");
@@ -103,8 +103,9 @@ export default function Page() {
             ${isMobile ? "ml-0" : open ? "ml-64" : "ml-16"} 
           `}
         >
-          <div className="max-w-350 mx-auto mt-6">
+          <div className="max-w-3xl mx-auto mt-6 markdown">
             <ReactMarkdown
+              remarkPlugins={[remarkGfm]} // ✅ aktifkan GFM (tabel, checklist, dsb)
               components={{
                 h1: ({ node, ...props }) => (
                   <h1
@@ -161,19 +162,70 @@ export default function Page() {
                   <ol className="list-decimal ml-6 mb-4 space-y-1" {...props} />
                 ),
                 li: ({ node, ...props }) => (
-                  <li className="text-sm sm:text-base md:text-lg mb-5" {...props} />
+                  <li
+                    className="text-sm sm:text-base md:text-lg mb-1 leading-relaxed"
+                    {...props}
+                  />
                 ),
-                br: ({ ...props }) => (
-                  <br {...props} className="block my-4" /> // `my-4` buat jarak atas bawah
+                br: ({ ...props }) => <br {...props} className="block my-4" />,
+                blockquote: ({ node, ...props }) => (
+                  <blockquote
+                    className="border-l-4 border-gray-600 bg-gray-800/40 text-gray-300 italic rounded-md pl-4 py-0.5 my-4"
+                    {...props}
+                  />
                 ),
+
+                /* ✅ Table support */
+                table: ({ node, ...props }) => (
+                  <div className="overflow-x-auto my-6">
+                    <table
+                      className="border-gray-700 rounded-lg overflow-hidden text-sm sm:text-base"
+                      {...props}
+                    />
+                  </div>
+                ),
+                thead: ({ node, ...props }) => (
+                  <thead
+                    className=" text-gray-100 border-b border-gray-700"
+                    {...props}
+                  />
+                ),
+                th: ({ node, ...props }) => (
+                  <th
+                    className="px-4 py-2 font-semibold text-left border-r border-gray-700 last:border-r-0"
+                    {...props}
+                  />
+                ),
+                tbody: ({ node, ...props }) => (
+                  <tbody className="divide-y divide-gray-800" {...props} />
+                ),
+                tr: ({ node, ...props }) => (
+                  <tr
+                    className="hover:bg-gray-800/40 transition-colors even:bg-gray-900/50"
+                    {...props}
+                  />
+                ),
+                td: ({ node, ...props }) => (
+                  <td
+                    className="px-4 py-2 text-gray-300 border-r border-gray-800 last:border-r-0"
+                    {...props}
+                  />
+                ),
+
+                /* ✅ Code block & inline code */
                 code({ node, inline, className, children, ...props }: any) {
                   const text = String(children).replace(/\n$/, "");
-                  const isTerminal = className === "language-terminal";
+                  const language = className?.replace("language-", "") || "";
+                  const isBlock = !inline && (language || text.includes("\n"));
+                  const isBash =
+                    language === "bash" ||
+                    language === "shell" ||
+                    language === "terminal";
 
-                  if (inline) {
+                  if (!isBlock) {
                     return (
                       <code
-                        className="bg-gray-800 text-green-400 px-1 py-0.5 rounded text-sm"
+                        className="bg-gray-800 text-white px-1.5 py-0.5 rounded font-mono text-sm"
                         {...props}
                       >
                         {children}
@@ -184,21 +236,20 @@ export default function Page() {
                   return (
                     <div className="relative group mb-4">
                       <SyntaxHighlighter
-                        language={
-                          isTerminal
-                            ? "bash"
-                            : className?.replace("language-", "")
-                        }
+                        language={isBash ? "bash" : language || "text"}
                         style={vs2015}
-                        className="rounded-lg overflow-x-auto bg-black text-white"
+                        className="rounded-lg overflow-x-auto"
                         customStyle={{
                           padding: "1rem",
                           fontSize: "0.9rem",
                           backgroundColor: "#0d1117",
+                          color: "#e6edf3",
                         }}
+                        showLineNumbers={false}
                       >
                         {text}
                       </SyntaxHighlighter>
+
                       <button
                         onClick={() => handleCopy(text)}
                         className="absolute top-2 right-2 bg-gray-700 text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition"
@@ -213,6 +264,7 @@ export default function Page() {
               {content}
             </ReactMarkdown>
 
+            {/* --- Navigation Buttons --- */}
             <div className="mt-20 flex flex-col sm:flex-row justify-between gap-4">
               {getPrevLabel() && (
                 <a

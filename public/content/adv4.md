@@ -32,6 +32,7 @@ Beberapa utilitas utama:
 
         ```
         ip a
+
         ```
 
         Opsi:
@@ -55,6 +56,7 @@ Beberapa utilitas utama:
 
         ```
         sudo ip addr add 192.168.1.10/24 dev eth0
+        
         ```
         
         Menetaplan alamat IP **192.168.1.10** ke interface **eth0**
@@ -65,6 +67,7 @@ Beberapa utilitas utama:
 
         ```
         sudo ip addr del 192.168.1.10/24 dev eth0
+
         ```
 
     ---
@@ -82,10 +85,39 @@ Beberapa utilitas utama:
 
         ```
         sudo ip route add default via 192.168.1.1
+
         ```
 
         Mengatur route/gateway utama sistem.
 
+    ---
+
+    - Konfigurasi Manual Menggunakan ``nano``
+
+        Buka file konfigurasi:
+
+        ```
+        sudo nano /etc/network/interfaces
+
+        ```
+
+        Tambahkan konfigurasi berikut:
+
+        ```
+        auto eth0
+        iface eth0 inet static
+            address 192.168.1.10
+            netmask 255.255.255.0
+            gateway 192.168.1.1
+            dns-nameserver 8.8.8.8 8.8.4.4
+        ```
+
+        Simpan, lalu restart jaringan:
+
+        ```
+        sudo systemctl restart networking
+
+        ```
 ---
 
 3. Mengecek Konektivitas dan DNS
@@ -109,6 +141,7 @@ Beberapa utilitas utama:
 
         ```
         ping -c 4 google.com
+
         ```
 
     ---
@@ -117,6 +150,7 @@ Beberapa utilitas utama:
 
         ```
         traceroute google.com
+
         ```
 
         Menunjukkan setiap hop yang dilalui paket
@@ -140,6 +174,7 @@ Beberapa utilitas utama:
 
         ```
         netstat -tuln
+
         ```
 
     ---
@@ -148,6 +183,7 @@ Beberapa utilitas utama:
 
         ```
         ss -tuln
+
         ```
 
         Opsi: 
@@ -166,6 +202,7 @@ Beberapa utilitas utama:
 
         ```
         sudo ss -tulpn
+
         ```
 
         Menampilkan semua port aktif beserta nama service dan PID.
@@ -176,6 +213,7 @@ Beberapa utilitas utama:
 
         ```
         sudo lsof -i :22
+
         ```
 
         Menampilkan proses yang memakai port 22
