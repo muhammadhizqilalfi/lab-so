@@ -293,3 +293,37 @@ Beberapa fungsi utama shell scripting:
     ```
 
     Artinya: Jalankan setiap hari pukul 02:00 pagi.
+
+---
+
+12. Studi Kasus
+
+    Script Monitoring Service
+
+    ```
+    #!/bin/bash
+    SERVICE="nginx"
+
+    if systemctl is-active --quiet $SERVICE; then
+    echo "$SERVICE aktif"
+    else
+    echo "$SERVICE mati, mencoba menyalakan..."
+    sudo systemctl start $SERVICE
+    fi
+    ```
+
+---
+
+13. Shortcut dan Separator di Shell
+
+    |Simbol|	Fungsi|
+    |----------|----------|
+    |;|	Jalankan beberapa command berurutan
+    |&&|	Jalankan perintah berikutnya jika sebelumnya sukses
+
+    Contoh:
+
+    ```
+    mkdir data; cd data && echo "Masuk ke folder data" || echo "Gagal masuk"
+
+    ```

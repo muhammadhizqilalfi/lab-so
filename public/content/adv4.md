@@ -14,13 +14,13 @@ Administrator sistem menggunakan perintah jaringan untuk:
 
 Beberapa utilitas utama:
 
-- **ip**, **ifconfig** — konfigurasi IP dan interface.
+- ``ip``, ``ifconfig`` — konfigurasi IP dan interface.
 
-- **ping**, **traceroute** — tes koneksi.
+- ``ping``, ``traceroute`` — tes koneksi.
 
-- **netstat**, **ss**, **lsof** — monitoring koneksi dan port.
+- ``netstat``, ``ss``, ``lsof`` — monitoring koneksi dan port.
 
-- **scp**, **rsync**, **ssh** — transfer dan manajemen remote.
+- ``scp``, ``rsync``, ``ssh`` — transfer dan manajemen remote.
 
 
 #### Command Network
@@ -28,7 +28,7 @@ Beberapa utilitas utama:
 
 1. Melihat & Mengonfigurasi Interface Jaringan
 
-    - Melihat Interface (**ip**)
+    - Melihat Interface ``ip``
 
         ```
         ip a
@@ -37,11 +37,11 @@ Beberapa utilitas utama:
 
         Opsi:
 
-        **addr** Menampilkan alamat IP semua interface
+        - ``addr`` Menampilkan alamat IP semua interface
         
-        **link** Menampilkan status interface (UP/DOWN, MAC address)
+        - ``link`` Menampilkan status interface (UP/DOWN, MAC address)
         
-        **route** - Menampilkan routing table
+        - ``route`` - Menampilkan routing table
 
         Contoh:
 
@@ -56,7 +56,7 @@ Beberapa utilitas utama:
 
         ```
         sudo ip addr add 192.168.1.10/24 dev eth0
-        
+
         ```
         
         Menetaplan alamat IP **192.168.1.10** ke interface **eth0**

@@ -1,19 +1,25 @@
 ## Lanjutan : Process & Service
----
+___
 
 Dalam sistem operasi Linux, proses (process) adalah program yang sedang berjalan.
 Setiap perintah yang kamu jalankan — dari **ls** hingga **nginx** — sebenarnya adalah proses.
 
 Sedangkan service (atau daemon) adalah proses yang berjalan di background dan biasanya dimulai secara otomatis saat sistem booting, misalnya:
-- **sshd** - Untuk koneksi SSH
-- **nginx** - Untuk web server
-- **cron** - Untuk penjadwalan tugas
+- ``sshd`` - Untuk koneksi SSH
+
+- ``nginx`` - Untuk web server
+
+- ``cron`` - Untuk penjadwalan tugas
 
 Manajemen process & service penting untuk:
+
 - Mendeteksi proses berat yang membebani CPU atau RAM
+
 - Menghentikan aplikasi yang crash
+
 - Mengatur prioritas proses
-- Mengelola startup service dengan **systemctl**
+
+- Mengelola startup service dengan ``systemctl``
 
 
 

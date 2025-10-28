@@ -61,17 +61,14 @@ export const menuConfig: MenuItem[] = [
       { label: "5. Network", file: "adv4.md" },
       { label: "6. Disk & Filesystem", file: "adv5.md" },
       { label: "7. Shell Scripting", file: "adv6.md" },
-      { label: "8. Mini server", file: "mini-server.md" },
-      { 
-        children: [
-          { label: "8.a. Web Server", file: "submini1.md" },
-          // { label: "8.b. File Server", file: "submini2.md" },
-          // { label: "8.c. DHCP Server", file: "submini3.md" },
-          // { label: "8.d. DNS Server", file: "submini4.md" },
-          // { label: "8.e. Proxy Server", file: "submini5.md" },
-        ]
-      }
+    ],
+  },
 
+  {
+    label: "Mini Server",
+    children: [
+      { label: "Web Server", file: "submini1.md" },
+      { label: "FTP", file: "submini2.md"},
     ],
   },
   {
