@@ -71,6 +71,7 @@ export const menuConfig: MenuItem[] = [
       { label: "SSH", file: "submini3.md" },
       { label: "Web Server", file: "submini1.md" },
       { label: "FTP", file: "submini2.md"},
+      { label: "Samba Server", file: "submini5.md"}
     ],
   },
   {
