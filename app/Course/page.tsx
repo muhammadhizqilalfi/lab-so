@@ -170,12 +170,12 @@ export default function Page() {
                 br: ({ ...props }) => <br {...props} className="block my-4" />,
                 blockquote: ({ node, ...props }) => (
                   <blockquote
-                    className="border-l-4 border-gray-600 bg-gray-800/40 text-gray-300 italic rounded-md pl-4 py-0.5 my-4"
+                    className="border-l-4 border-gray-600 bg-gray-800/40 text-gray-300 italic rounded-md pl-3 py-0.5 my-4"
                     {...props}
                   />
                 ),
 
-                /* ✅ Table support */
+                /* Table support */
                 table: ({ node, ...props }) => (
                   <div className="overflow-x-auto my-6">
                     <table
@@ -212,7 +212,7 @@ export default function Page() {
                   />
                 ),
 
-                /* ✅ Code block & inline code */
+                /* Code block & inline code */
                 code({ node, inline, className, children, ...props }: any) {
                   const text = String(children).replace(/\n$/, "");
                   const language = className?.replace("language-", "") || "";

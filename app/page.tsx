@@ -18,7 +18,7 @@ export default function Home() {
 
         {/* Judul */}
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-mono font-bold tracking-widest mb-4">
-          LAB SISTEM OPERASI B
+          LAB SISTEM OPERASI A
         </h1>
 
         {/* Deskripsi */}

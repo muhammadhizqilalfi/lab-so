@@ -115,4 +115,74 @@ Linux menyediakan beberapa layanan FTP seperti:
     
     ```
 
+#### Akses FTP dari Client
+
+Akses FTP bisa dilakukan melalui software tambahan atau dari terminal langsung:
+
+1. Terminal
+
+    Login FTP:
+
+    ```
+    ftp [IP:Port]
+
+    ```
+
+    Jika pakai user:
+
+    ```
+    ftp -n [IP:Port]
+
+    ```
+
+    Kemudian:
+
+    ```
+    user [username]
+
+    ```
+
+    Command FTP dasar:
+
+    |Command|Fungsi|
+    |----|----|
+    |ls|Lihat list file
+    |cd folder|Masuk Folder
+    |get file.txt|Download file
+    |put file.txt|Upload file
+    |mget *.txt|Download banyak file
+    |mput *.txt|Upload banyak file
+    |bye/quit|Keluar
+
+    Upload file contoh:
+
+    ```
+    put backup.zip
+
+    ```
+
+    Download file:
+
+    ```
+    get tugas.pdf
+
+    ```
+
+2. FileZilla
+
+    Download FileZilla : [Download](https://filezilla-project.org/download.php?platform=win64)
+
+    Buka FileZilla dan isi:
+
+    - Host: sftp://[IP]
+    
+    - Username: [username_linux]
+    
+    - Password: [pass_linux]
+    
+    - Port: [Port] jika menggunakan port custom
+
+
+    Lalu **Quickconnect**
+
 

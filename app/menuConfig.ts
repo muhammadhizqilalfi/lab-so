@@ -67,6 +67,8 @@ export const menuConfig: MenuItem[] = [
   {
     label: "Mini Server",
     children: [
+      { label: "IP Static", file: "submini4.md" },
+      { label: "SSH", file: "submini3.md" },
       { label: "Web Server", file: "submini1.md" },
       { label: "FTP", file: "submini2.md"},
     ],
