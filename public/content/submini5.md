@@ -177,3 +177,5 @@ Dengan Samba, Ubuntu Server dapat berfungsi sebagai:
 
     ```
     sudo smbpasswd -e [username]
+
+    ```
